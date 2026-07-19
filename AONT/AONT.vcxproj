@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{69b15871-46f9-41dc-9f18-cc011bb1cf02}</ProjectGuid>
+    <RootNamespace>AONT</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>..\depends\cryptopp890</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\depends\cryptopp890\$(Platform)\Output\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>..\depends\cryptopp890</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\depends\cryptopp890\$(Platform)\Output\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>..\depends\cryptopp890</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\depends\cryptopp890\$(Platform)\Output\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>..\depends\cryptopp890</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\depends\cryptopp890\$(Platform)\Output\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\depends\cryptopp890\3way.h" />
+    <ClInclude Include="..\depends\cryptopp890\adler32.h" />
+    <ClInclude Include="..\depends\cryptopp890\adv_simd.h" />
+    <ClInclude Include="..\depends\cryptopp890\aes.h" />
+    <ClInclude Include="..\depends\cryptopp890\aes_armv4.h" />
+    <ClInclude Include="..\depends\cryptopp890\algebra.h" />
+    <ClInclude Include="..\depends\cryptopp890\algparam.h" />
+    <ClInclude Include="..\depends\cryptopp890\allocate.h" />
+    <ClInclude Include="..\depends\cryptopp890\arc4.h" />
+    <ClInclude Include="..\depends\cryptopp890\argnames.h" />
+    <ClInclude Include="..\depends\cryptopp890\aria.h" />
+    <ClInclude Include="..\depends\cryptopp890\arm_simd.h" />
+    <ClInclude Include="..\depends\cryptopp890\asn.h" />
+    <ClInclude Include="..\depends\cryptopp890\authenc.h" />
+    <ClInclude Include="..\depends\cryptopp890\base32.h" />
+    <ClInclude Include="..\depends\cryptopp890\base64.h" />
+    <ClInclude Include="..\depends\cryptopp890\basecode.h" />
+    <ClInclude Include="..\depends\cryptopp890\bench.h" />
+    <ClInclude Include="..\depends\cryptopp890\blake2.h" />
+    <ClInclude Include="..\depends\cryptopp890\blowfish.h" />
+    <ClInclude Include="..\depends\cryptopp890\blumshub.h" />
+    <ClInclude Include="..\depends\cryptopp890\camellia.h" />
+    <ClInclude Include="..\depends\cryptopp890\cast.h" />
+    <ClInclude Include="..\depends\cryptopp890\cbcmac.h" />
+    <ClInclude Include="..\depends\cryptopp890\ccm.h" />
+    <ClInclude Include="..\depends\cryptopp890\chacha.h" />
+    <ClInclude Include="..\depends\cryptopp890\chachapoly.h" />
+    <ClInclude Include="..\depends\cryptopp890\cham.h" />
+    <ClInclude Include="..\depends\cryptopp890\channels.h" />
+    <ClInclude Include="..\depends\cryptopp890\cmac.h" />
+    <ClInclude Include="..\depends\cryptopp890\config.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_align.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_asm.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_cpu.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_cxx.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_dll.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_int.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_misc.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_ns.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_os.h" />
+    <ClInclude Include="..\depends\cryptopp890\config_ver.h" />
+    <ClInclude Include="..\depends\cryptopp890\cpu.h" />
+    <ClInclude Include="..\depends\cryptopp890\crc.h" />
+    <ClInclude Include="..\depends\cryptopp890\cryptlib.h" />
+    <ClInclude Include="..\depends\cryptopp890\darn.h" />
+    <ClInclude Include="..\depends\cryptopp890\default.h" />
+    <ClInclude Include="..\depends\cryptopp890\des.h" />
+    <ClInclude Include="..\depends\cryptopp890\dh.h" />
+    <ClInclude Include="..\depends\cryptopp890\dh2.h" />
+    <ClInclude Include="..\depends\cryptopp890\dll.h" />
+    <ClInclude Include="..\depends\cryptopp890\dmac.h" />
+    <ClInclude Include="..\depends\cryptopp890\donna.h" />
+    <ClInclude Include="..\depends\cryptopp890\donna_32.h" />
+    <ClInclude Include="..\depends\cryptopp890\donna_64.h" />
+    <ClInclude Include="..\depends\cryptopp890\donna_sse.h" />
+    <ClInclude Include="..\depends\cryptopp890\drbg.h" />
+    <ClInclude Include="..\depends\cryptopp890\dsa.h" />
+    <ClInclude Include="..\depends\cryptopp890\eax.h" />
+    <ClInclude Include="..\depends\cryptopp890\ec2n.h" />
+    <ClInclude Include="..\depends\cryptopp890\eccrypto.h" />
+    <ClInclude Include="..\depends\cryptopp890\ecp.h" />
+    <ClInclude Include="..\depends\cryptopp890\ecpoint.h" />
+    <ClInclude Include="..\depends\cryptopp890\elgamal.h" />
+    <ClInclude Include="..\depends\cryptopp890\emsa2.h" />
+    <ClInclude Include="..\depends\cryptopp890\eprecomp.h" />
+    <ClInclude Include="..\depends\cryptopp890\esign.h" />
+    <ClInclude Include="..\depends\cryptopp890\factory.h" />
+    <ClInclude Include="..\depends\cryptopp890\fhmqv.h" />
+    <ClInclude Include="..\depends\cryptopp890\files.h" />
+    <ClInclude Include="..\depends\cryptopp890\filters.h" />
+    <ClInclude Include="..\depends\cryptopp890\fips140.h" />
+    <ClInclude Include="..\depends\cryptopp890\fltrimpl.h" />
+    <ClInclude Include="..\depends\cryptopp890\gcm.h" />
+    <ClInclude Include="..\depends\cryptopp890\gf256.h" />
+    <ClInclude Include="..\depends\cryptopp890\gf2n.h" />
+    <ClInclude Include="..\depends\cryptopp890\gf2_32.h" />
+    <ClInclude Include="..\depends\cryptopp890\gfpcrypt.h" />
+    <ClInclude Include="..\depends\cryptopp890\gost.h" />
+    <ClInclude Include="..\depends\cryptopp890\gzip.h" />
+    <ClInclude Include="..\depends\cryptopp890\hashfwd.h" />
+    <ClInclude Include="..\depends\cryptopp890\hc128.h" />
+    <ClInclude Include="..\depends\cryptopp890\hc256.h" />
+    <ClInclude Include="..\depends\cryptopp890\hex.h" />
+    <ClInclude Include="..\depends\cryptopp890\hight.h" />
+    <ClInclude Include="..\depends\cryptopp890\hkdf.h" />
+    <ClInclude Include="..\depends\cryptopp890\hmac.h" />
+    <ClInclude Include="..\depends\cryptopp890\hmqv.h" />
+    <ClInclude Include="..\depends\cryptopp890\hrtimer.h" />
+    <ClInclude Include="..\depends\cryptopp890\ida.h" />
+    <ClInclude Include="..\depends\cryptopp890\idea.h" />
+    <ClInclude Include="..\depends\cryptopp890\integer.h" />
+    <ClInclude Include="..\depends\cryptopp890\iterhash.h" />
+    <ClInclude Include="..\depends\cryptopp890\kalyna.h" />
+    <ClInclude Include="..\depends\cryptopp890\keccak.h" />
+    <ClInclude Include="..\depends\cryptopp890\lea.h" />
+    <ClInclude Include="..\depends\cryptopp890\lsh.h" />
+    <ClInclude Include="..\depends\cryptopp890\lubyrack.h" />
+    <ClInclude Include="..\depends\cryptopp890\luc.h" />
+    <ClInclude Include="..\depends\cryptopp890\mars.h" />
+    <ClInclude Include="..\depends\cryptopp890\md2.h" />
+    <ClInclude Include="..\depends\cryptopp890\md4.h" />
+    <ClInclude Include="..\depends\cryptopp890\md5.h" />
+    <ClInclude Include="..\depends\cryptopp890\mdc.h" />
+    <ClInclude Include="..\depends\cryptopp890\mersenne.h" />
+    <ClInclude Include="..\depends\cryptopp890\misc.h" />
+    <ClInclude Include="..\depends\cryptopp890\modarith.h" />
+    <ClInclude Include="..\depends\cryptopp890\modes.h" />
+    <ClInclude Include="..\depends\cryptopp890\modexppc.h" />
+    <ClInclude Include="..\depends\cryptopp890\mqueue.h" />
+    <ClInclude Include="..\depends\cryptopp890\mqv.h" />
+    <ClInclude Include="..\depends\cryptopp890\naclite.h" />
+    <ClInclude Include="..\depends\cryptopp890\nbtheory.h" />
+    <ClInclude Include="..\depends\cryptopp890\nr.h" />
+    <ClInclude Include="..\depends\cryptopp890\oaep.h" />
+    <ClInclude Include="..\depends\cryptopp890\oids.h" />
+    <ClInclude Include="..\depends\cryptopp890\osrng.h" />
+    <ClInclude Include="..\depends\cryptopp890\ossig.h" />
+    <ClInclude Include="..\depends\cryptopp890\padlkrng.h" />
+    <ClInclude Include="..\depends\cryptopp890\panama.h" />
+    <ClInclude Include="..\depends\cryptopp890\pch.h" />
+    <ClInclude Include="..\depends\cryptopp890\pkcspad.h" />
+    <ClInclude Include="..\depends\cryptopp890\poly1305.h" />
+    <ClInclude Include="..\depends\cryptopp890\polynomi.h" />
+    <ClInclude Include="..\depends\cryptopp890\ppc_simd.h" />
+    <ClInclude Include="..\depends\cryptopp890\pssr.h" />
+    <ClInclude Include="..\depends\cryptopp890\pubkey.h" />
+    <ClInclude Include="..\depends\cryptopp890\pwdbased.h" />
+    <ClInclude Include="..\depends\cryptopp890\queue.h" />
+    <ClInclude Include="..\depends\cryptopp890\rabbit.h" />
+    <ClInclude Include="..\depends\cryptopp890\rabin.h" />
+    <ClInclude Include="..\depends\cryptopp890\randpool.h" />
+    <ClInclude Include="..\depends\cryptopp890\rc2.h" />
+    <ClInclude Include="..\depends\cryptopp890\rc5.h" />
+    <ClInclude Include="..\depends\cryptopp890\rc6.h" />
+    <ClInclude Include="..\depends\cryptopp890\rdrand.h" />
+    <ClInclude Include="..\depends\cryptopp890\resource.h" />
+    <ClInclude Include="..\depends\cryptopp890\rijndael.h" />
+    <ClInclude Include="..\depends\cryptopp890\ripemd.h" />
+    <ClInclude Include="..\depends\cryptopp890\rng.h" />
+    <ClInclude Include="..\depends\cryptopp890\rsa.h" />
+    <ClInclude Include="..\depends\cryptopp890\rw.h" />
+    <ClInclude Include="..\depends\cryptopp890\safer.h" />
+    <ClInclude Include="..\depends\cryptopp890\salsa.h" />
+    <ClInclude Include="..\depends\cryptopp890\scrypt.h" />
+    <ClInclude Include="..\depends\cryptopp890\seal.h" />
+    <ClInclude Include="..\depends\cryptopp890\secblock.h" />
+    <ClInclude Include="..\depends\cryptopp890\secblockfwd.h" />
+    <ClInclude Include="..\depends\cryptopp890\seckey.h" />
+    <ClInclude Include="..\depends\cryptopp890\seed.h" />
+    <ClInclude Include="..\depends\cryptopp890\serpent.h" />
+    <ClInclude Include="..\depends\cryptopp890\serpentp.h" />
+    <ClInclude Include="..\depends\cryptopp890\sha.h" />
+    <ClInclude Include="..\depends\cryptopp890\sha1_armv4.h" />
+    <ClInclude Include="..\depends\cryptopp890\sha256_armv4.h" />
+    <ClInclude Include="..\depends\cryptopp890\sha3.h" />
+    <ClInclude Include="..\depends\cryptopp890\sha512_armv4.h" />
+    <ClInclude Include="..\depends\cryptopp890\shacal2.h" />
+    <ClInclude Include="..\depends\cryptopp890\shake.h" />
+    <ClInclude Include="..\depends\cryptopp890\shark.h" />
+    <ClInclude Include="..\depends\cryptopp890\simeck.h" />
+    <ClInclude Include="..\depends\cryptopp890\simon.h" />
+    <ClInclude Include="..\depends\cryptopp890\simple.h" />
+    <ClInclude Include="..\depends\cryptopp890\siphash.h" />
+    <ClInclude Include="..\depends\cryptopp890\skipjack.h" />
+    <ClInclude Include="..\depends\cryptopp890\sm3.h" />
+    <ClInclude Include="..\depends\cryptopp890\sm4.h" />
+    <ClInclude Include="..\depends\cryptopp890\smartptr.h" />
+    <ClInclude Include="..\depends\cryptopp890\sosemanuk.h" />
+    <ClInclude Include="..\depends\cryptopp890\speck.h" />
+    <ClInclude Include="..\depends\cryptopp890\square.h" />
+    <ClInclude Include="..\depends\cryptopp890\stdcpp.h" />
+    <ClInclude Include="..\depends\cryptopp890\strciphr.h" />
+    <ClInclude Include="..\depends\cryptopp890\tea.h" />
+    <ClInclude Include="..\depends\cryptopp890\threefish.h" />
+    <ClInclude Include="..\depends\cryptopp890\tiger.h" />
+    <ClInclude Include="..\depends\cryptopp890\trap.h" />
+    <ClInclude Include="..\depends\cryptopp890\trunhash.h" />
+    <ClInclude Include="..\depends\cryptopp890\ttmac.h" />
+    <ClInclude Include="..\depends\cryptopp890\tweetnacl.h" />
+    <ClInclude Include="..\depends\cryptopp890\twofish.h" />
+    <ClInclude Include="..\depends\cryptopp890\validate.h" />
+    <ClInclude Include="..\depends\cryptopp890\vmac.h" />
+    <ClInclude Include="..\depends\cryptopp890\wake.h" />
+    <ClInclude Include="..\depends\cryptopp890\whrlpool.h" />
+    <ClInclude Include="..\depends\cryptopp890\words.h" />
+    <ClInclude Include="..\depends\cryptopp890\xed25519.h" />
+    <ClInclude Include="..\depends\cryptopp890\xtr.h" />
+    <ClInclude Include="..\depends\cryptopp890\xtrcrypt.h" />
+    <ClInclude Include="..\depends\cryptopp890\xts.h" />
+    <ClInclude Include="..\depends\cryptopp890\zdeflate.h" />
+    <ClInclude Include="..\depends\cryptopp890\zinflate.h" />
+    <ClInclude Include="..\depends\cryptopp890\zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\boost.1.72.0.0\build\boost.targets" Condition="Exists('..\packages\boost.1.72.0.0\build\boost.targets')" />
+    <Import Project="..\packages\boost_program_options-src.1.72.0.0\build\boost_program_options-src.targets" Condition="Exists('..\packages\boost_program_options-src.1.72.0.0\build\boost_program_options-src.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\boost.1.72.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.72.0.0\build\boost.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_program_options-src.1.72.0.0\build\boost_program_options-src.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_program_options-src.1.72.0.0\build\boost_program_options-src.targets'))" />
+  </Target>
+</Project>
