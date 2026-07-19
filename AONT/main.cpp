@@ -260,7 +260,7 @@ array_t aont_encrypt(const array_t& input)
         }
     }
 
-    // 擬似メッセーの各ブロックをランダムに選択された鍵で暗号化されたそのブロックのインデックスと XOR して前処理する。
+    // 擬似メッセージの各ブロックをランダムに選択された鍵で暗号化されたそのブロックのインデックスと XOR して前処理する。
     key_t hash;
     std::copy(random_key.begin(), random_key.end(), hash.begin());
     for (std::size_t index = 0; index < pseudo_messages.size(); ++index)
