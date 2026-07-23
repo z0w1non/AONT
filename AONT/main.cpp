@@ -30,7 +30,7 @@ using key_t = std::array<byte, key_size>;
 using block_t = std::array<byte, block_size>;
 
 /**
- * @breif バイト列を 16 進数として出力ストリームに出力する。
+ * @brief バイト列を 16 進数として出力ストリームに出力する。
  * @param data バイト列の先頭
  * @param size バイト数
  * @param out 出力ストリーム
@@ -45,7 +45,7 @@ void dump_hex(const byte* data, std::size_t size, std::ostream & out = std::cout
 }
 
 /**
- * @breif バイト列を固定長のブロックに分割する。
+ * @brief バイト列を固定長のブロックに分割する。
  * @param bytes バイト列
  * @return 分割されたブロックを要素とする可変長配列
  */
@@ -65,7 +65,7 @@ std::vector<block_t> split_blocks(const array_t& bytes)
 }
 
 /**
- * @breif バイト列を可変長配列に分割する。
+ * @brief バイト列を可変長配列に分割する。
  * @param bytes バイト列
  * @return 分割されたバイト列を要素とする可変長配列
  */
@@ -84,7 +84,7 @@ std::vector<array_t> split_arrays(const array_t& bytes, unsigned int split_numbe
 }
 
 /**
- * @breif SHA-256 を使用してハッシュ値を計算する。
+ * @brief SHA-256 を使用してハッシュ値を計算する。
  * @param data 入力の先頭
  * @param size 入力のサイズ
  * @param output_hash 出力ハッシュ
@@ -95,7 +95,7 @@ void sha256_hash(const byte* data, std::size_t size, key_t& output_hash)
 }
 
 /**
- * @breif CBC モードを使用して AES で暗号化する。
+ * @brief CBC モードを使用して AES で暗号化する。
  * @param input 入力の先頭
  * @param input_size 入力のバイト数
  * @param output 出力の先頭
@@ -112,7 +112,7 @@ void aes_encrypt(const byte* input, std::size_t input_size, byte* output, Crypto
 }
 
 /**
- * @breif 値をバイト列に変換する。
+ * @brief 値をバイト列に変換する。
  * @param value 値
  * @param data バイト列の先頭
  * @param size バイト数
@@ -175,7 +175,7 @@ key_t blocks_to_key(const block_t* blocks, std::size_t block_number)
 }
 
  /**
-  * @breif バイト列同士を XOR 演算した結果を出力する。
+  * @brief バイト列同士を XOR 演算した結果を出力する。
   * @param input_a 入力バイト列A
   * @param input_b 入力バイト列B
   * @param size バイト数
@@ -190,7 +190,7 @@ void bytes_xor(const byte* input_a, const byte* input_b, std::size_t size, byte 
 }
 
 /**
- * @breif 可変長配列を連結する。
+ * @brief 可変長配列を連結する。
  * @param array 可変長配列
  * @return 連結された可変長配列
  */
@@ -206,7 +206,7 @@ array_t concatenate(const std::vector<T>& array)
 }
 
 /**
- * @breif インデックスを暗号化する。
+ * @brief インデックスを暗号化する。
  * @param index インデックス
  * @param encryption Encryption
  * @return 暗号化されたブロック
@@ -221,7 +221,7 @@ block_t encrypt_index(std::size_t index, CryptoPP::CBC_Mode<CryptoPP::AES>::Encr
 }
 
 /**
- * @breif AONT 方式で入力データを暗号化する。
+ * @brief AONT 方式で入力データを暗号化する。
  * @param input 入力データ
  * @return 暗号文
  */
@@ -294,7 +294,7 @@ array_t aont_encrypt(const array_t& input)
 }
 
 /**
- * @breif AONT 方式で入力データを復号する。
+ * @brief AONT 方式で入力データを復号する。
  * @param input 入力データ
  * @return 平文
  */
@@ -361,7 +361,7 @@ array_t aont_decrypt(const array_t& input)
 }
 
 /**
- * @breif ファイルを可変長配列として読み込む。
+ * @brief ファイルを可変長配列として読み込む。
  * @param file ファイルのパス
  * @return 可変長配列
  */
@@ -373,7 +373,7 @@ array_t file_to_array(const std::filesystem::path& file)
 }
 
 /**
- * @breif encrypt モードの実装
+ * @brief encrypt モードの実装
  * @param source_file_path 平文ファイルのパス
  * @param split_number 分割数
  */
@@ -393,7 +393,7 @@ void encrypt_mode(const std::filesystem::path& source_file_path, unsigned int sp
 }
 
 /**
- * @breif decrypt モードの実装
+ * @brief decrypt モードの実装
  * @param encrypted_files 暗号化されたファイルのパスの可変長配列
  * @param output_file_path 出力ファイルのパス
  */
